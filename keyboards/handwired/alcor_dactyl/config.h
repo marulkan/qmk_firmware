@@ -3,29 +3,29 @@
 
 #pragma once
 
-
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
 
 /* disable debug print */
-//#define NO_DEBUG
+// #define NO_DEBUG
 
 /* disable print */
-//#define NO_PRINT
+// #define NO_PRINT
 
 /* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
+// #define NO_ACTION_LAYER
+// #define NO_ACTION_TAPPING
+// #define NO_ACTION_ONESHOT
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U
 #define SERIAL_USART_FULL_DUPLEX
 #define SERIAL_USART_TX_PIN GP4
 #define SERIAL_USART_RX_PIN GP5
-/*#define RGB_DI_PIN GP25 */
+#define RGB_DI_PIN GP25
 #define RGB_MATRIX_LED_COUNT 2
-#define RGB_MATRIX_SPLIT { 1, 1 }
+#define RGB_MATRIX_SPLIT \
+    { 1, 1 }
 #define EE_HANDS
