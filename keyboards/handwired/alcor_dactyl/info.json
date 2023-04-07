@@ -21,15 +21,15 @@
     "split": {
         "enabled": true
     },
-    "diode_direction": "ROW2COL",
+    "diode_direction": "COL2ROW",
     "matrix_pins": {
       "rows": [
         "GP10",
         "GP11",
         "GP12",
         "GP13",
-        "GP15",
-        "GP14"
+        "GP14",
+        "GP15"
       ],
       "cols": [
         "GP16",
