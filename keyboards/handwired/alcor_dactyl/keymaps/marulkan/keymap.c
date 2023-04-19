@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_Z,     KC_X,    KC_C,    KC_V,   KC_B,                                KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
         KC_LEFT, KC_RIGHT, KC_LBRC, KC_RBRC,                                                               KC_EQL,  KC_MINS, KC_UP,   KC_DOWN,
 
-                        KC_BSPC, OSL_HERB, OSL_HERB, KC_SPC, KC_LSFT, KC_LCTL, KC_RCTL, KC_RSFT, KC_DEL, KC_LALT, KC_RALT, KC_ENT
+                        KC_BSPC, OSL_HRB, OSL_HRB, KC_SPC, KC_LSFT, KC_LCTL, KC_RCTL, KC_RSFT, KC_DEL, KC_LALT, KC_RALT, KC_ENT
 
     ),
     [_NUMPAD] = LAYOUT(
@@ -71,12 +71,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                           KC_TRNS , KC_TRNS ,       KC_TRNS , KC_TRNS
     ),
     [_HERB] = LAYOUT(
-        TG_NUM,  KC_1,     KC_2,    KC_3,    KC_4,   KC_5,   KC_HOME,            KC_PGUP, KC_6,    KC_7,   KC_8,    KC_9,    KC_0,    TG_SYM,
-        KC_TAB,  KC_Q,     KC_W,    KC_E,    KC_R,   KC_T,   KC_END,             KC_PGDN, KC_Y,    KC_U,   KC_I,    KC_O,    KC_SCLN, KC_BSLS,
-        KC_ESC,  KC_A,     KC_S,    KC_D,    KC_F,   KC_G,   KC_INS,             KC_GRV,  KC_H,    KC_J,   KC_K,    KC_L,    KC_P,    KC_QUOT,
-        KC_LSFT, KC_Z,     KC_X,    KC_C,    KC_V,   KC_B,                                KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-        KC_LEFT, KC_RIGHT, KC_LBRC, KC_RBRC,                                                               KC_EQL,  KC_MINS, KC_UP,   KC_DOWN,
+        TG_NUM,  G(KC_1),     G(KC_2,    G(KC_3,    G(KC_4,   G(KC_5,   KC_HOME,            KC_PGUP, G(KC_6,    G(KC_7,   G(KC_8),    G(KC_9),    G(KC_0),    TG_SYM,
+        KC_TRNS, KC_Q,     KC_W,    KC_E,    KC_R,   KC_T,   KC_END,             KC_PGDN, KC_Y,    KC_U,   KC_I,    KC_O,    KC_SCLN, KC_BSLS,
+        KC_TRNS, KC_A,     KC_S,    KC_D,    KC_F,   KC_G,   KC_INS,             KC_GRV,  KC_H,    KC_J,   KC_K,    KC_L,    KC_P,    KC_QUOT,
+        KC_TRNS, KC_Z,     KC_X,    KC_C,    KC_V,   KC_B,                                KC_N,    KC_M,   KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+        KC_TRNS, KC_RIGHT, KC_LBRC, KC_RBRC,                                                               KC_EQL,  KC_MINS, KC_UP,   KC_DOWN,
 
-                        KC_BSPC, KC_NO, KC_NO, KC_SPC, KC_LSFT, KC_LCTL, KC_RCTL, KC_RSFT, KC_DEL, KC_LALT, KC_RALT, KC_ENT
+                        KC_TRNS, OSL_HRB, OSL_HRB, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     )
 };
+
+/*
+|`LCTL(kc)`|`C(kc)`                           |Hold Left Control and press `kc`                      |
+|`LSFT(kc)`|`S(kc)`                           |Hold Left Shift and press `kc`                        |
+|`LALT(kc)`|`A(kc)`, `LOPT(kc)`               |Hold Left Alt and press `kc`                          |
+|`LGUI(kc)`|`G(kc)`, `LCMD(kc)`, `LWIN(kc)`   |Hold Left GUI and press `kc`                          |
+*/
